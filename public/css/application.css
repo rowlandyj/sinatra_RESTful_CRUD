@@ -16,9 +16,6 @@ th {
   padding: 5px;
 }
 
-#create_header {
-  text-align: center; 
-}
 
 .create_form {
   text-align: center;
@@ -28,6 +25,8 @@ th {
   width: 30%;
 }
 
-.user_header {
+.user_header, #create_header, .sign_out {
   text-align: center;
 }
+
+

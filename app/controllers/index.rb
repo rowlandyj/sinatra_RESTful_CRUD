@@ -17,8 +17,6 @@ get '/users/:id' do |id|
   erb :user
 end
 
-
-
 post '/create' do
   @user = User.create(params[:user])
   if @user.valid?
@@ -36,5 +34,10 @@ post '/' do
   else
     redirect "/create"
   end
+end
+
+get '/clear' do
+  session.clear
+  redirect '/'
 end
 
