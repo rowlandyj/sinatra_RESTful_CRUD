@@ -1,6 +1,24 @@
 <div class='user_header'>
 <h1>Welcome <%=@user.name%></h1>
 </div>
+
+<div class='posts'>
+<h2>Here are Your Posts: </h2>
+
+<% if @post.nil? %>
+  <p>You have no posts</p>
+<% else %>
+  <% @post.each do |post| %>
+    <ul>
+      <li>post</li>
+    </ul>
+    <%end%>
+<%end%>
+</div>
+
+
+
+<br>
 <div class="sign_out">
 <a href='/clear'>Sign Out</a>
 </div>

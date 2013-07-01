@@ -14,6 +14,7 @@ end
 
 get '/users/:id' do |id|
   @user = User.find(id)
+  @post = Post.find_by_user_id(id)
   erb :user
 end
 
