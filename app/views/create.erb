@@ -1,0 +1,42 @@
+<div id="create_header">
+<h1>Create Account</h1>
+</div>
+
+<div class="create_form">
+  <form action='/create' method='post'>
+    <input type='text' name='user[name]' placeholder='Name' value="<%=@user.name%>">
+
+    <div class = "error">
+    <% @user.errors.each do |field,message| %>
+      <% if field == :name %>
+        <span style="color:red;"> <%=message%> </span>
+      <%end%>
+    <%end%>
+    </div>
+
+    <br><br>
+    <input type='text' name='user[email]' placeholder='Email' value="<%=@user.email%>">
+
+    <div class = "error">
+    <% @user.errors.each do |field,message| %>
+      <% if field == :email %>
+        <span style="color:red;"> <%=message%> </span>
+      <%end%>
+    <%end%>
+    </div>
+
+    <br><br>
+    <input type='password' name='user[password]' placeholder='Password'>
+
+    <div class = "error">
+    <% @user.errors.each do |field,message| %>
+      <% if field == :password %>
+        <span style="color:red;"> <%=message%> </span>
+      <%end%>
+    <%end%>
+    </div>
+
+    <br><br>
+    <input type='submit' value="Create Account">
+  </form>
+</div>
