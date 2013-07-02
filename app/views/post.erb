@@ -1,0 +1,26 @@
+<h1 id='post_header'>Create Your New Post Here</h1>
+
+<div class='create_form'>
+<form action='/create_post' method='post'>
+    <input type='text' name='post[title]' placeholder='Title' value="<%=@post.title%>">
+
+    <div class = "error">
+    <% @post.errors.each do |field,message| %>
+      <% if field == :name %>
+        <span style="color:red;"> <%=message%> </span>
+      <%end%>
+    <%end%>
+    </div>
+    <br>
+    <textarea  name="post[content]" cols="35" rows="5" placeholder='Content'><%=@post.content%></textarea><br />
+
+    <div class = "error">
+    <% @post.errors.each do |field,message| %>
+      <% if field == :name %>
+        <span style="color:red;"> <%=message%> </span>
+      <%end%>
+    <%end%>
+    </div>
+    <br>
+    <input type='submit' value="Create Post">
+</div>

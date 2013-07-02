@@ -25,7 +25,7 @@ th {
   width: 30%;
 }
 
-.user_header, #create_header, .sign_out, .posts {
+.user_header, #create_header, .sign_out, .posts, #post_header {
   text-align: center;
 }
 
